@@ -30,8 +30,8 @@ class BerealBot:
         self._start_hour = 7
         self._stop_hour = 17
         self._job_proba = 0.5
-        self._job_min_interval = 10 #60 * 60 * 3 # min three hours between task
-        self._job_retry_interval = 5 #60 * 30 # min time to retry task on failure
+        self._job_min_interval = 60 * 60 * 3 # min three hours between task
+        self._job_retry_interval = 60 * 30 # min time to retry task on failure
 
     async def start(self, chat_id):
         if chat_id not in self._members:
